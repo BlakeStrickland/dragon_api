@@ -14,5 +14,5 @@ class AbilitiesViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows abilities to be viewed or edited.
     """
-    queryset = Ability.objects.all().order_by('name')
+    queryset = Ability.objects.all().order_by('ability_name')
     serializer_class = AbilitySerializer

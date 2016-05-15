@@ -11,9 +11,12 @@ class CharacterStatistics(models.Model):
         on_delete=models.CASCADE, null=True
     )
 
+    def __str__(self):
+        return "{}".format(self.name)
+
 class Ability(models.Model):
     character = models.ManyToManyField(CharacterStatistics)
-    name = models.CharField(max_length=255)
+    ability_name = models.CharField(max_length=255)
     damage = models.IntegerField()
     ability_range = models.CharField(max_length=255)
     minimum_power_to_use = models.IntegerField()

@@ -10,4 +10,4 @@ class CharacterStatisticsSerializer(serializers.HyperlinkedModelSerializer):
 class AbilitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Ability
-        fields = ('character', 'name', 'damage', 'ability_range', 'minimum_power_to_use')
+        fields = ('character', 'ability_name', 'damage', 'ability_range', 'minimum_power_to_use')
