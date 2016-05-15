@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Ability
+from .models import Ability, CharacterStatistics
 
 
 class CharacterStatisticsSerializer(serializers.HyperlinkedModelSerializer):
