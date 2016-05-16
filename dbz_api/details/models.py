@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CharacterStatistics(models.Model):
     name = models.CharField(max_length=255)
     birth_name = models.CharField(max_length=20)
@@ -20,3 +21,6 @@ class Ability(models.Model):
     damage = models.IntegerField()
     ability_range = models.CharField(max_length=255)
     minimum_power_to_use = models.IntegerField()
+
+# def details(render):
+#     return render(request, '../templates/details/index.html', {'ability': ability})

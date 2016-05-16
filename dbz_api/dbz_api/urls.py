@@ -11,7 +11,7 @@ router.register(r'character_statistics', views.CharacterStatisticsViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^api/', include(router.urls)),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.details, name='details'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
