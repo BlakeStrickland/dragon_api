@@ -1,22 +1,32 @@
-var $characters = $('.card');
+var $characters = $('#character');
 var $power_level = $('#power_level');
-
+var $card = $(".card")
 
 $.get('http://127.0.0.1:8000/api/character_statistics/', function(characters){
   characters.forEach(function(character) {
     var $p = $('<li>');
     var $p2 = $('<p>');
 
+    $name = character.name
+    // $p.text(character.name);
+    // $p.appendTo($characters);
+    $power_level = character.power_level
+    // $p2.text(character.power_level);
+    // $p2.appendTo($characters);
+    $(".card").append('<div class="stats"> '+ $name + "<br />" + $power_level + '</div>')
 
-    $p.text(character.name);
-    $p.appendTo($characters);
-
-    $p2.text(character.power_level);
-    $p2.appendTo($characters);
   })
 })
 
+
 $( "li" ).first().hide();
+
+// my_list = $.get('http://127.0.0.1:8000/api/character_statistics/', function(response) {
+//   console.log(response.data)
+// })
+// console.log(my_list)
+
+
 
 // $.get('http://127.0.0.1:8000/api/character_statistics/'), function(list_characters){
 //   list_characters.forEach(function(list_characters) {
