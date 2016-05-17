@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Characters</title>
+  </head>
+  <body>
+    <form id="ability" action="" method="post">
+      <legend>Create Ability</legend>
+      <label for="">Ability name</label>
+      <input type="text" name="ability_name" value="">
+      <br />
+      <label for="">Damage</label>
+      <input type="text" name="damage" value="">
+      <br />
+      <label for="">Ability Range</label>
+      <input type="text" name="ability_range" value="">
+      <br />
+      <label for="">Minimum power to use</label>
+      <input type="text" name="minimum_power_to_use" value="">
+      <br />
+      <input type="submit" value="Create Ability">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="{% static "details/dragon.js" %}"></script>
+  </body>
+</html>

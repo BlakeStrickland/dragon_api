@@ -12,6 +12,7 @@ router.register(r'character_statistics', views.CharacterStatisticsViewSet)
 urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^$', views.details, name='details'),
+    url(r'^create/', views.create, name='create'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 

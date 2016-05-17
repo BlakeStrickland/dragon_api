@@ -33,3 +33,7 @@ def details(request):
         'ability': ability,
     }
     return HttpResponse(template.render(context, request))
+
+
+def create(request):
+    pass 
